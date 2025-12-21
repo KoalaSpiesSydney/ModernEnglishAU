@@ -351,7 +351,7 @@ footer{
     <nav>
       <a class="active" href="#top">Home</a>
       <a href="microlesson.html">Micro Lessons</a>
-      <a class="cta" href="#contact">Contact</a>
+      <a class="cta" href="wpcontact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -383,7 +383,7 @@ footer{
         </p>
 
         <div class="actions">
-          <a class="btn" href="#about">More about me</a>
+          <a class="btn" href="wpabout.html">More about me</a>
         </div>
 
         <div class="block">
@@ -493,11 +493,12 @@ footer{
     <div class="footer-links">
       <a href="#top">KOALA SPIES SYDNEY</a>
       <a href="microlesson.html:>Micro Lessons</a>
-      <a href="#contact">Contact</a>
+      <a href="wpcontact.html">Contact</a>
     </div>
   </div>
 </footer>
 
 </body>
 </html>
+
 
