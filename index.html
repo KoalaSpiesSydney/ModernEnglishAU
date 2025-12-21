@@ -21,6 +21,7 @@
   --line:rgba(194, 192, 192, 0.1);
   --max:1120px;
   --header:#2b2a2a;
+  --var: #ff7a1a;
 }
 
 /* Base */
@@ -44,9 +45,10 @@ a{ color:inherit; text-decoration:none; }
 /* HEADER */
 header{
   background:var(--header);
-  color:#fff;
+  color: #ff7a1a;
   border-bottom:1px solid rgba(255,255,255,.10);
   font-size:10px;
+  
 }
 
 /* ✅ Move brand text inward to align with column one */
@@ -68,7 +70,7 @@ header{
 
 /* ✅ Cleaner, larger, more elegant brand typography */
 .brand-top{
-  color:var(--accent);
+  color:#ff7a1a;;
   letter-spacing:2px;
   font-weight:900;
   text-transform:uppercase;
@@ -78,9 +80,9 @@ header{
 
 .kss-font{
   font-family:"tt-modernoir", sans-serif;
-  font-weight:900;
+  font-weight:700;
   font-size:15px;
-  letter-spacing:2px;
+  letter-spacing:4px;
   color:#ffffff;
 }
 
@@ -344,14 +346,14 @@ footer{
 <header>
   <div class="wrap header-inner">
     <a class="brand" href="#top">
-      <div class="brand-top">Modern English Australia</div>
+      <div class="brand-top">Modern English Au</div>
       <span class="kss-font">Koala Spies Sydney</span>
     </a>
 
     <nav>
       <a class="active" href="#top">Home</a>
       <a href="microlesson.html">Micro Lessons</a>
-      <a class="cta" href="wpcontact.html">Contact</a>
+      <a class="cta" href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -383,7 +385,7 @@ footer{
         </p>
 
         <div class="actions">
-          <a class="btn" href="wpabout.html">More about me</a>
+          <a class="btn" href="#about">More about me</a>
         </div>
 
         <div class="block">
@@ -489,11 +491,11 @@ footer{
 
 <footer>
   <div class="wrap footer-inner">
-    <div>© Koala Spies Sydney · Modern English Australia · All Rights Reserved</div>
+    <div>© Koala Spies Sydney · Modern English AU · All Rights Reserved</div>
     <div class="footer-links">
       <a href="#top">KOALA SPIES SYDNEY</a>
-      <a href="microlesson.html:>Micro Lessons</a>
-      <a href="wpcontact.html">Contact</a>
+      <a href="#micro-lessons">Micro Lessons</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </footer>
