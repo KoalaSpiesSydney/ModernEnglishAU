@@ -492,7 +492,7 @@ footer{
     <div>© Koala Spies Sydney · Modern English Australia · All Rights Reserved</div>
     <div class="footer-links">
       <a href="#top">KOALA SPIES SYDNEY</a>
-      <a href="#micro-lessons">Micro Lessons</a>
+      <a href="microlesson.html:>Micro Lessons</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -500,3 +500,4 @@ footer{
 
 </body>
 </html>
+
