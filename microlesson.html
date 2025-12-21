@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern English Australia · Koala Spies Sydney</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Palette */
+      --bg:#f6f7f5;          /* off-white */
+      --ink:#111111;         /* near black */
+      --charcoal:#1e1e1e;    /* charcoal */
+      --muted:#5f6a66;       /* muted grey-green */
+      --accent:#0f6f6a;      /* teal */
+      --line:rgba(0,0,0,.10);
+
+      /* Header/Footer */
+      --header: var(--charcoal);
+      --header-ink: #f5f5f5;
+
+      --max: 860px;          /* one-column width */
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family:"Newsreader", Georgia, serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.9;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+    .muted{ color:var(--muted); }
+    .small{ font-size:.95rem; }
+
+    /* Header */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background:var(--header);
+      color:var(--header-ink);
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:16px 0;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      min-width:220px;
+    }
+    .brand-top{
+      color:var(--accent);
+      letter-spacing:2px;
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:1.02rem;
+      line-height:1.1;
+    }
+    .brand-sub{
+      opacity:.9;
+      font-size:.95rem;
+      color:var(--header-ink);
+    }
+    
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      color:var(--header-ink);
+      opacity:.92;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      transition:opacity .12s ease, border-color .12s ease, transform .12s ease;
+      background:rgba(255,255,255,.04);
+    }
+    nav a:hover{
+      opacity:1;
+      border-color:rgba(255,255,255,.28);
+      transform:translateY(-1px);
+    }
+    nav a.active{
+      opacity:1;
+      border-color:rgba(255,255,255,.35);
+      background:rgba(255,255,255,.07);
+    }
+    nav a.cta{
+      background:var(--accent);
+      color:#081514;
+      font-weight:700;
+      border-color:transparent;
+    }
+
+    /* Main */
+    main{
+      display:block;
+    }
+    .section{
+      padding:44px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    /* Typography */
+    .kicker{
+      color:var(--accent);
+      font-weight:700;
+      letter-spacing:1.6px;
+      text-transform:uppercase;
+      font-size:.9rem;
+      margin:0 0 10px;
+    }
+    h1,h2,h3{ margin:0 0 12px; line-height:1.22; }
+    h1{ font-size:clamp(2rem, 1.4rem + 2.2vw, 3rem); }
+    h2{ font-size:clamp(1.35rem, 1.1rem + 1vw, 2rem); margin-top:18px; }
+    h3{ font-size:1.1rem; margin-top:18px; }
+    p{ margin:0 0 14px; }
+
+    /* Footer */
+    footer{
+      background:var(--header);
+      color:var(--header-ink);
+      border-top:1px solid rgba(255,255,255,.10);
+      padding:18px 0;
+    }
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .footer-links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      opacity:.9;
+      background:rgba(255,255,255,.04);
+    }
+    .footer-links a:hover{ opacity:1; border-color:rgba(255,255,255,.28); }
+
+    /* Responsive */
+    @media (max-width: 720px){
+      .header-inner{ align-items:flex-start; }
+      nav{ justify-content:flex-start; }
+      .brand{ min-width:auto; }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <div class="brand-top">Modern English Australia</div>
+        <div class="brand-sub">Koala Spies Sydney</div>
+      </a>
+
+      <nav aria-label="Primary">
+        <a class="active" href="#top">Home</a>
+        <a href="#micro-lessons">Micro Lessons</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="micro-lessons" class="section">
+      <div class="wrap">
+        <p class="kicker">Micro lessons</p>
+        <h1>
+<h1>
+  Micro Lessons for Classroom Teaching and Self‑Study
+  <span class="animated-phrase">education revolution</span>
+</h1>
+
+
+        <p>
+          These lessons are part of my ongoing work as a test designer, UX learning designer, and EdTech specialist.
+          They showcase the kind of interactive, research-based materials I create—fast, focused activities that build
+          real exam skills as well as everyday communication skills.
+        </p>
+
+        <p>
+          Each lesson is fully responsive and can be used on a computer, phone, tablet, or projected onto a classroom
+          whiteboard. Teachers can use them as warm-ups, extension activities, or quick feedback tools. Learners can use
+          them independently at home to strengthen areas that textbooks and traditional curricula often miss.
+        </p>
+
+        <p class="muted">
+          The lessons target pronunciation, listening, micro-writing, grammar accuracy, and common learner errors across
+          IELTS, PTE, CAE, and general English. They are short, practical, and designed to fill the gaps that matter—
+          supporting both test preparation and clearer, more confident communication in an English-speaking environment.
+        </p>
+        <!-- Repeat Sentences & Dictation -->
+<div class="category">
+  <div class="category-title">Repeat Sentences & Dictation</div>
+  <ul class="item-list">
+    <li>Dictation: 8 Academic sentences</li>
+    <li>Repeat sentences + Plus // Set 1</li>
+    <li>Repeat sentence + Plus // Set 2</li>
+    <li>Write from Dictation + // Set 1</li>
+    <li>Repeat Sentence — Understanding the beginning</li>
+  </ul>
+</div>
+
+<!-- Micro Grammar Lesson & Activities -->
+<div class="category">
+  <div class="category-title">Micro Grammar Lesson & Activities</div>
+  <ul class="item-list">
+    <li>Why can’t I say that in the continuous tense? – because it’s a state verb!</li>
+    <li>Intermediate level – State vs Dynamic verbs</li>
+    <li>Advanced level – State vs Dynamic verbs</li>
+    <li>Intermediate level – Verb + prepositions</li>
+    <li>Collocations for listening and reading (IELTS, PTE & CAE)</li>
+  </ul>
+</div>
+
+<!-- Vocab & Grammar Games -->
+<div class="category">
+  <div class="category-title">Vocab & Grammar Games</div>
+  <ul class="item-list">
+    <li>Money Idioms — play, listen, write and talk</li>
+    <li>Casual vs Academic language</li>
+  </ul>
+</div>
+
+<!-- Repeat Sentences & Dictation (duplicate section) -->
+<div class="category">
+  <div class="category-title">Repeat Sentences & Dictation</div>
+  <ul class="item-list">
+    <li>Dictation: 8 Academic sentences</li>
+    <li>Repeat sentences + Plus // Set 1</li>
+    <li>Repeat sentence + Plus // Set 2</li>
+    <li>Write from Dictation + // Set 1</li>
+    <li>Repeat Sentence — Understanding the beginning</li>
+  </ul>
+</div>
+
+<!-- Pronunciation Lessons -->
+<div class="category">
+  <div class="category-title">Pronunciation Lessons</div>
+  <ul class="item-list">
+    <li>Dictation Practice — understanding contractions with deductions</li>
+    <li>Vocab & Pron: thorough, through, though and thoughts</li>
+    <li>Dictation Practice — understanding contractions with deductions</li>
+    <li>Dictation Practice — understanding past verbs + IELTS speaking challenge</li>
+    <li>Pronunciation: word patterns in academic words with Greek origins</li>
+    <li>Pronunciation: word stress on analyze, analysis and analytical</li>
+  </ul>
+</div>
+
+<!-- Practice Tests -->
+<div class="category">
+  <div class="category-title">Practice Tests</div>
+  <ul class="item-list">
+    <li>CAE Practice Reading Part 1–4</li>
+    <li>Arrange Paragraphs</li>
+    <li>Style PTE // Time: 17 minutes // Auto answers</li>
+    <li>Test your phrasal verbs for tech</li>
+    <li>Style CAE // Time: 10 minutes // PDF lesson and locked answers (code in PDF)</li>
+  </ul>
+</div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap">
+        <p class="kicker">Contact</p>
+        <h2>Contact</h2>
+        <p class="muted">Add your email, social links, or a real form handler later.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© Koala Spies Sydney · Modern English Australia · All Rights Reserved</div>
+      <div class="footer-links">
+        <a href="#top">KOALA SPIES SYDNEY</a>
+        <a href="#micro-lessons">Micro Lessons</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

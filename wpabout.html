@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About · Modern English Australia · Koala Spies Sydney</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f6f7f5;
+      --ink:#111111;
+      --muted:#5f6a66;
+      --accent:#0f6f6a;
+      --line:rgba(194, 192, 192, 0.1);
+      --header:#2b2a2a;
+      --max:1120px;
+      --narrow:760px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+
+    body{
+      margin:0;
+      font-family:"Newsreader", Georgia, serif;
+      font-size:20px;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.9;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+    .wrap-narrow{ max-width:var(--narrow); margin:0 auto; padding:0 20px; }
+
+    .muted{ color:var(--muted); }
+    .small{ font-size:.95rem; }
+
+    /* HEADER */
+    header{
+      background:var(--header);
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+      padding-left:20px; /* aligns with column */
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+
+    .brand-top{
+      color:var(--accent);
+      letter-spacing:2px;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:1.25rem;
+      line-height:1.1;
+    }
+
+    .kss-font{
+      font-family:"tt-modernoir", sans-serif;
+      font-weight:900;
+      font-size:15px;
+      letter-spacing:2px;
+      color:#ffffff;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      color:#ffffff;
+      opacity:.9;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-size:0.95rem;
+      font-weight:600;
+      transition:opacity .12s ease, border-color .12s ease, color .12s ease;
+    }
+
+    nav a:hover{
+      opacity:1;
+      border-color:rgba(255,255,255,.22);
+      color:#ffffff;
+    }
+
+    nav a.active{
+      opacity:1;
+      border-color:rgba(255,255,255,.35);
+      color:#ffffff;
+    }
+
+    nav a.cta{
+      background:var(--accent);
+      color:#ffffff;
+      font-weight:900;
+      border-color:transparent !important;
+    }
+
+    /* SECTION */
+    .section{
+      padding:64px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    /* TYPOGRAPHY */
+    .kicker{
+      color:var(--accent);
+      font-weight:900;
+      letter-spacing:1.6px;
+      text-transform:uppercase;
+      font-size:.9rem;
+      margin:0 0 10px;
+    }
+
+    h1,h2,h3{
+      margin:0 0 12px;
+      line-height:1.22;
+      color:var(--ink);
+    }
+
+    h1{ font-size:clamp(2rem, 1.4rem + 2.2vw, 3rem); }
+    h2{ font-size:clamp(1.35rem, 1.1rem + 1vw, 2rem); margin-top:26px; }
+    h3{ font-size:1.1rem; margin-top:22px; }
+
+    p{ margin:0 0 16px; }
+
+    ul{ margin:10px 0 16px; padding-left:18px; }
+    li{ margin:8px 0; }
+
+    /* BLOCKS */
+    .block{
+      padding-top:19px;
+      border-top:1px solid var(--line);
+      margin-top:28px;
+    }
+
+    /* BUTTONS */
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 28px;
+      border-radius:8px;
+      background:#fff;
+      color:var(--ink);
+      font-weight:600;
+      border:1px solid var(--line);
+      letter-spacing:.3px;
+      transition:background .2s ease, transform .12s ease, box-shadow .2s ease, color .2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#111;
+      border-color:transparent;
+    }
+
+    .btn.primary:hover{
+      background:#0d5c58;
+    }
+
+    /* HERO IMAGE */
+    .hero-image{
+      width:100%;
+      height:auto;
+      display:block;
+      margin:22px 0 26px;
+      border-radius:6px;
+    }
+
+    /* PULLQUOTE */
+    .pullquote{
+      margin:26px 0 10px;
+      padding:18px 18px;
+      border-left:3px solid var(--accent);
+      background:rgba(15,111,106,.05);
+      color:var(--ink);
+      border-radius:6px;
+    }
+
+    /* ANIMATED PHRASE */
+    .animated-phrase{
+      display:inline-block;
+      position:relative;
+      color:var(--accent);
+      font-weight:900;
+      white-space:nowrap;
+      animation:slide-across 4.5s ease-out forwards;
+    }
+
+    .animated-phrase::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:100%;
+      height:3px;
+      background:linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity:.6;
+    }
+
+    @keyframes slide-across{
+      0%{ transform:translateX(-40px); opacity:0; }
+      60%{ opacity:1; }
+      100%{ transform:translateX(0); opacity:1; }
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--header);
+      color:#ffffff;
+      border-top:1px solid rgba(255,255,255,.10);
+      padding:18px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a{
+      color:#ffffff;
+      opacity:.9;
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+    }
+
+    .footer-links a:hover{
+      opacity:1;
+      border-color:rgba(255,255,255,.22);
+      color:#ffffff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:980px){
+      nav{ justify-content:flex-start; }
+      .brand{ min-width:auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-top">Modern English Australia</div>
+      <div class="kss-font">Koala Spies Sydney</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="index.html#micro">Micro Lessons</a>
+      <a class="cta" href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap-narrow">
+
+      <p class="kicker">About</p>
+
+      <h1>
+        Design-led learning, built for the real world
+        <span class="animated-phrase">education revolution</span>
+      </h1>
+
+      <p class="muted" style="font-weight:800;">
+        EdTech Designer • UX Learning Designer • Creative Educator
+      </p>
+
+      <p>
+        I build digital learning experiences that combine design, technology, and pedagogy into tools that actually
+        work in real classrooms — and feel good to use.
+      </p>
+
+      <p>
+        My background spans EdTech, UX/UI, front-end development, instructional design, and creative media.
+        This mix allows me to design and develop complete learning products: from the first sketch to the final
+        interactive experience.
+      </p>
+
+      <img src="jportfoliopic.png" alt="Modern English Australia and Koala Spies Sydney" class="hero-image" />
+
+      <p class="small muted">Modern English Australia · Koala Spies Sydney</p>
+
+      <p class="muted"><strong>EdTech Designer • UX Learning Designer • Creative Educator</strong></p>
+
+      <p>
+        I design digital learning experiences that combine pedagogy, interface design, and front-end development —
+        so lessons work smoothly in class, on phones, on tablets, and on a projector.
+      </p>
+
+      <div class="pullquote">
+        My focus is micro-lessons: fast, practical activities that build exam skills and everyday communication —
+        without the heavy feel of traditional worksheets.
+      </div>
+
+      <div class="block">
+        <h2>What I build</h2>
+        <p>
+          This site is a home for interactive lessons, prototypes, and classroom-ready tools. Each activity is designed
+          with clear flow, clean layout, and minimal friction — so students can stay focused on the language task.
+        </p>
+
+        <ul>
+          <li>Responsive layouts for phones, iPads, laptops, and whiteboards</li>
+          <li>Pronunciation, listening, micro-writing, and grammar accuracy tasks</li>
+          <li>Exam-aligned practice (CAE / PTE-style skills)</li>
+          <li>Fast feedback and simple, intuitive interactions</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>How I design</h2>
+        <p>
+          Learning is an experience. When the interface is calm and predictable, students can use their attention for
+          comprehension, accuracy, and fluency — not figuring out the page.
+        </p>
+
+        <ul>
+          <li>Clear navigation and simple user flows</li>
+          <li>Strong visual rhythm and restrained colour</li>
+          <li>Low cognitive load and readable typography</li>
+          <li>Audio-first support for listening and pronunciation work</li>
+          <li>Accessibility across devices and classroom contexts</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>Who it’s for</h2>
+        <p>
+          Teachers can use these as warm-ups, targeted skill drills, or extension tasks. Learners can use them
+          independently to strengthen areas that textbooks often miss.
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="index.html#micro">Explore micro lessons</a>
+          <a class="btn primary" href="index.html#contact">Contact me</a>
+        </div>
+      </div>
+
+      <div class="block" id="contact">
+        <h2>Contact</h2>
+        <p class="muted small">
+          Add your preferred contact method here (email, form link, or social links).
+        </p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© Koala Spies Sydney · Modern English Australia</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="wpcontact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

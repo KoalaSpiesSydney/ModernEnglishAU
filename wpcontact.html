@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact · Modern English Australia · Koala Spies Sydney</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,600;6..72,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f6f7f5;
+      --ink:#111111;
+      --muted:#5f6a66;
+      --accent:#0f6f6a;
+      --line:rgba(194, 192, 192, 0.1);
+      --header:#2b2a2a;
+      --max:1120px;
+      --narrow:760px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+
+    body{
+      margin:0;
+      font-family:"Newsreader", Georgia, serif;
+      font-size:20px;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.9;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+    .wrap-narrow{ max-width:var(--narrow); margin:0 auto; padding:0 20px; }
+
+    .muted{ color:var(--muted); }
+    .small{ font-size:.95rem; }
+
+    /* HEADER */
+    header{
+      background:var(--header);
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+      padding-left:20px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+
+    .brand-top{
+      color:var(--accent);
+      letter-spacing:2px;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:1.25rem;
+      line-height:1.1;
+    }
+
+    .kss-font{
+      font-family:"tt-modernoir", sans-serif;
+      font-weight:900;
+      font-size:15px;
+      letter-spacing:2px;
+      color:#ffffff;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      color:#ffffff;
+      opacity:.9;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-size:0.95rem;
+      font-weight:600;
+      transition:opacity .12s ease, border-color .12s ease, color .12s ease;
+    }
+
+    nav a:hover{
+      opacity:1;
+      border-color:rgba(255,255,255,.22);
+      color:#ffffff;
+    }
+
+    nav a.active{
+      opacity:1;
+      border-color:rgba(255,255,255,.35);
+      color:#ffffff;
+    }
+
+    nav a.cta{
+      background:var(--accent);
+      color:#ffffff;
+      font-weight:900;
+      border-color:transparent !important;
+    }
+
+    /* SECTION */
+    .section{
+      padding:64px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    /* TYPOGRAPHY */
+    .kicker{
+      color:var(--accent);
+      font-weight:900;
+      letter-spacing:1.6px;
+      text-transform:uppercase;
+      font-size:.9rem;
+      margin:0 0 10px;
+    }
+
+    h1,h2,h3{
+      margin:0 0 12px;
+      line-height:1.22;
+      color:var(--ink);
+    }
+
+    h1{ font-size:clamp(2rem, 1.4rem + 2.2vw, 3rem); }
+    h2{ font-size:clamp(1.35rem, 1.1rem + 1vw, 2rem); margin-top:26px; }
+
+    p{ margin:0 0 16px; }
+
+    /* CARD */
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:28px;
+      margin-top:28px;
+    }
+
+    .contact-grid{
+      display:grid;
+      gap:32px;
+      margin-top:20px;
+    }
+
+    .row .label{
+      font-weight:700;
+      margin-bottom:4px;
+    }
+
+    .hint{
+      font-size:.9rem;
+      color:var(--muted);
+      margin-top:8px;
+    }
+
+    /* BUTTONS */
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 28px;
+      border-radius:8px;
+      background:#fff;
+      color:var(--ink);
+      font-weight:600;
+      border:1px solid var(--line);
+      letter-spacing:.3px;
+      transition:background .2s ease, transform .12s ease, box-shadow .2s ease, color .2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#111;
+      border-color:transparent;
+    }
+
+    .btn.primary:hover{
+      background:#0d5c58;
+    }
+
+    .notice{
+      margin-top:28px;
+      padding:18px;
+      background:rgba(15,111,106,.06);
+      border-left:3px solid var(--accent);
+      border-radius:6px;
+      font-size:.95rem;
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--header);
+      color:#ffffff;
+      border-top:1px solid rgba(255,255,255,.10);
+      padding:18px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a{
+      color:#ffffff;
+      opacity:.9;
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+    }
+
+    .footer-links a:hover{
+      opacity:1;
+      border-color:rgba(255,255,255,.22);
+      color:#ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-top">Modern English Australia</div>
+      <div class="kss-font">Koala Spies Sydney</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#micro">Micro Lessons</a>
+      <a class="active cta" href="wpcontact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap-narrow">
+
+      <p class="kicker">Contact</p>
+      <h1>Get in touch</h1>
+
+      <p class="muted">
+        Professional enquiries only. If you’re a teacher, school, or organisation, include your context and timeline
+        so I can respond quickly.
+      </p>
+
+      <div class="card">
+        <h2 style="margin-top:0;">Quick contact</h2>
+
+        <div class="contact-grid">
+
+          <!-- EMAIL -->
+          <div class="row">
+            <p class="label">Email</p>
+            <p class="value">
+              <span id="emailText">koalaspies [at] duck [dot] com</span>
+            </p>
+
+            <div class="actions">
+              <button class="btn" type="button" id="revealEmailBtn">Reveal email</button>
+              <a class="btn primary" id="emailLink" href="#" rel="nofollow noopener">Email me</a>
+            </div>
+
+            <p class="hint">
+              Tip: using a Duck.com alias is great for privacy and cuts down on spam.
+            </p>
+          </div>
+
+          <!-- WHATSAPP -->
+          <div class="row">
+            <p class="label">WhatsApp Business</p>
+            <p class="value">Fastest for quick questions and scheduling.</p>
+
+            <div class="actions">
+              <a
+                class="btn primary"
+                href="https://wa.me/610450539335?text=Hi%20Justine%2C%20I%E2%80%99m%20enquiring%20about..."
+                target="_blank"
+                rel="noopener"
+              >
+                Message on WhatsApp
+              </a>
+
+              <button class="btn" type="button" id="revealPhoneBtn">Show number</button>
+            </div>
+
+            <p class="hint" id="phoneText" style="display:none;">
+              +61 X XXX XXX XXX
+            </p>
+          </div>
+
+        </div>
+
+        <div class="notice">
+          <strong>Boundary note:</strong> This contact info is for professional enquiries only.
+          Spam and sales pitches won’t get a reply.
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>© Koala Spies Sydney · Modern English Australia</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+<script>
+// -----------------------------
+// EMAIL REVEAL (spam-protected)
+// -----------------------------
+document.getElementById("revealEmailBtn").addEventListener("click", function () {
+  // Build email in JS so bots can't scrape it from HTML
+  const user = "koalaspies";
+  const domain = "duck.com";
+  const email = user + "@" + domain;
+
+  // Update visible text
+  document.getElementById("emailText").textContent = email;
+
+  // Update the "Email me" button
+  const emailLink = document.getElementById("emailLink");
+  emailLink.href = "mailto:" + email;
+
+  // Optional: visual feedback
+  this.textContent = "Email revealed";
+  this.disabled = true;
+});
+
+// -----------------------------
+// PHONE REVEAL
+// -----------------------------
+document.getElementById("revealPhoneBtn").addEventListener("click", function () {
+  const phoneText = document.getElementById("phoneText");
+  phoneText.style.display = "block";
+
+  this.textContent = "Number shown";
+  this.disabled = true;
+});
+
+// -----------------------------
+// SUCCESS MESSAGE (after clicking Email Me)
+// -----------------------------
+document.getElementById("emailLink").addEventListener("click", function () {
+  // Create success message
+  const msg = document.createElement("p");
+  msg.textContent = "Message window opened — you can send your email now.";
+  msg.style.color = "var(--accent)";
+  msg.style.fontWeight = "600";
+  msg.style.marginTop = "10px";
+
+  // Insert after the button group
+  this.parentElement.appendChild(msg);
+
+  // Fade out after 4 seconds
+  setTimeout(() => {
+    msg.style.transition = "opacity 0.6s ease";
+    msg.style.opacity = "0";
+    setTimeout(() => msg.remove(), 600);
+  }, 4000);
+});
+</script>
