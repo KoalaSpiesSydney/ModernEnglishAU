@@ -47,7 +47,7 @@ header{
   background:var(--header);
   color: #ff7a1a;
   border-bottom:1px solid rgba(255,255,255,.10);
-  font-size:10px;
+  font-size:30px;
   
 }
 
@@ -57,8 +57,10 @@ header{
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding:18px 0;
+  padding-right:18px 0;
   padding-left:20px;   /* ← 1 cm equivalent on most screens */
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .brand{
@@ -71,20 +73,34 @@ header{
 /* ✅ Cleaner, larger, more elegant brand typography */
 .brand-top{
   color:#ff7a1a;;
-  letter-spacing:2px;
+  letter-spacing:4px;
   font-weight:900;
   text-transform:uppercase;
-  font-size:1.25rem;
+  font-size:2.25rem;
   line-height:1.1;
 }
 
-.kss-font{
+.kss-font {
   font-family:"tt-modernoir", sans-serif;
   font-weight:700;
   font-size:15px;
-  letter-spacing:4px;
+  letter-spacing:8px;
   color:#ffffff;
+  animation:glow 2.4s ease-in-out infinite;
 }
+
+@keyframes glow {
+  0%   { text-shadow:0 0 0px rgba(255,255,255,0.3); }
+  50%  { text-shadow:0 0 8px rgba(255,255,255,0.7); }
+  100% { text-shadow:0 0 0px rgba(255,255,255,0.3); }
+}
+
+
+@keyframes shimmer {
+  0% { left:-100%; }
+  100% { left:100%; }
+}
+
 
 /* NAVIGATION */
 nav{
@@ -159,8 +175,13 @@ li{ margin:8px 0; }
   padding-top:19px;
   border-top:1px solid var(--line);
   margin-top:18px;
-  text-align:center;
+  text-align:center;}
+
+  .block ul {
+    text-align:left;
+    padding-left:18px; /* keeps bullets in correct position */
 }
+
 
 /* BUTTONS */
 .actions{
@@ -217,8 +238,9 @@ li{ margin:8px 0; }
 .item-list{
   list-style:none;
   padding:0;
-  margin:0;
+    margin-bottom: 2rem;
 }
+
 
 .item-list li{
   margin:8px 0;
@@ -240,35 +262,10 @@ footer{
   color:#ffffff;
   border-top:1px solid rgba(255,255,255,.10);
   padding:18px 0;
+  text-align: center;
 }
 
-.footer-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  flex-wrap:wrap;
-}
 
-.footer-links{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-.footer-links a{
-  color:#ffffff;
-  padding:8px 10px;
-  border-radius:12px;
-  border:1px solid transparent;
-  opacity:.9;
-}
-
-.footer-links a:hover{
-  opacity:1;
-  border-color:rgba(255,255,255,.22);
-  color:#ffffff;
-}
 
 /* RESPONSIVE */
 @media (max-width:980px){
@@ -311,9 +308,9 @@ footer{
   aspect-ratio:16/9;
   border-radius:18px;
   overflow:hidden;
-  box-shadow:0 18px 50px rgba(0,0,0,.15);
-  background:#000;
+ box-shadow: 0 6px 20px rgba(0,0,0,0.25); /* stronger shadow */ border-radius: 8px; /* optional */
   margin-bottom:20px;
+  margin-top: 20px;
 }
 
 .iframe-wrap iframe{
@@ -374,25 +371,19 @@ footer{
         </p>
 
         <p>
-          I build digital learning experiences that combine design, technology, and pedagogy into tools that actually
-          work in real classrooms — and feel good to use.
+          With a background in Language Teaching and Examining, Creative Media, AI model training and development and UX design, I design and develop complete learning products: from the first sketch to the final interactive experience.
         </p>
 
         <p>
-          My background spans EdTech, UX/UI, front-end development, instructional design, and creative media.
-          This mix allows me to design and develop complete learning products: from the first sketch to the final
-          interactive experience.
-        </p>
+          Learning experience and technology in the classroom or for self-study  should feel good to use; it should feel human-first.
 
         <div class="actions">
           <a class="btn" href="#about">More about me</a>
         </div>
 
         <div class="block">
-          <h2>What I Do</h2>
-          <h3>I design and build</h3>
-          <p>&</p>
-          <h3>I teach other educators how to design and build:</h3>
+          <h2>Some of What We Can Do</h2>
+
         </div>
 
         <ul>
@@ -454,19 +445,19 @@ footer{
           </div>
 
           <ul class="item-list">
-                <a href="https://koalaspiessydney.github.io/preposition-song/"> Revise with Music:  Preposition for Pre-Intermediates</a>
+                <a href="https://koalaspiessydney.github.io/preposition-song/">Intermediate- Prepositions- A song</a>
           </ul>
           <div class="iframe-wrap">
             <iframe src="https://koalaspiessydney.github.io/preposition-song/" loading="lazy" allowfullscreen></iframe>
           </div>
 
-          <div class="category-title">More Language Skills</div>
+          <div class="category-title">Tricky Pronunciation</div>
 
           <ul class="item-list">
-                <a href="https://koalaspiessydney.github.io/MoneyIdioms/">Intermediate prepositions</a>
+                <a href="https://koalaspiessydney.github.io/throughthoughthorough/">Intermediate prepositions</a>
           </ul>
           <div class="iframe-wrap">
-            <iframe src="https://example.com" loading="lazy" allowfullscreen></iframe>
+            <iframe src="https://koalaspiessydney.github.io/throughthoughthorough/" loading="lazy" allowfullscreen></iframe>
           </div>
 
           <ul class="item-list">
@@ -495,17 +486,12 @@ footer{
 <footer>
   <div class="wrap footer-inner">
     <div>© Koala Spies Sydney · Modern English AU · All Rights Reserved</div>
-    <div class="footer-links">
-      <a href="#top">KOALA SPIES SYDNEY</a>
-      <a href="#micro-lessons">Micro Lessons</a>
-      <a href="#contact">Contact</a>
-    </div>
+  
   </div>
 </footer>
 
 </body>
 </html>
-
 
 
 
