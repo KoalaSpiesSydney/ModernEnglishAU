@@ -43,41 +43,65 @@
     .small{ font-size:.95rem; }
 
     /* Header */
-    header{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background:var(--header);
-      color:var(--header-ink);
-      border-bottom:1px solid rgba(255,255,255,.10);
-    }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:16px 0;
-      flex-wrap:wrap;
-    }
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:2px;
-      min-width:220px;
-    }
-    .brand-top{
-      color:var(--accent);
-      letter-spacing:2px;
-      font-weight:700;
-      text-transform:uppercase;
-      font-size:1.02rem;
-      line-height:1.1;
-    }
-    .brand-sub{
-      opacity:.9;
-      font-size:.95rem;
-      color:var(--header-ink);
-    }
+header{
+  background:var(--header);
+  color: #ff7a1a;
+  border-bottom:1px solid rgba(255,255,255,.10);
+  font-size:30px;
+  
+}
+
+/* ✅ Move brand text inward to align with column one */
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding-right:18px 0;
+  padding-left:20px;   /* ← 1 cm equivalent on most screens */
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.brand{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:220px;
+}
+
+/* ✅ Cleaner, larger, more elegant brand typography */
+.brand-top{
+  color:#ff7a1a;;
+  letter-spacing:4px;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:2.25rem;
+  line-height:1.1;
+}
+
+.kss-font {
+  font-family:"tt-modernoir", sans-serif;
+  font-weight:700;
+  font-size:15px;
+  letter-spacing:8px;
+  color:#ffffff;
+  animation:glow 2.4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%   { text-shadow:0 0 0px rgba(255,255,255,0.3); }
+  50%  { text-shadow:0 0 8px rgba(255,255,255,0.7); }
+  100% { text-shadow:0 0 0px rgba(255,255,255,0.3); }
+}
+
+
+@keyframes shimmer {
+  0% { left:-100%; }
+  100% { left:100%; }
+}
+n-items:center;
+      j
     
 
     nav{
@@ -147,15 +171,20 @@
     .footer-inner{
       display:flex;
       align-items:center;
-      justify-content:space-between;
+      justify-content:center;
       gap:14px;
       flex-wrap:wrap;
-    }
-    .footer-links{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+
+}
+
+ 
+  
+    .footer-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
     .footer-links a{
       padding:8px 10px;
       border-radius:12px;
@@ -171,52 +200,114 @@
       nav{ justify-content:flex-start; }
       .brand{ min-width:auto; }
     }
+  .animated-phrase{
+  display:inline-block;
+  position:relative;
+  color:var(--accent);
+  font-weight:900;
+  white-space:nowrap;
+  animation:slide-across 2.5s ease-out forwards;
+}
+
+
+
+@keyframes slide-across {
+  0% {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-across {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 10;
+  }
+  70% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.animated-phrase::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:100%;
+  height:3px;
+  background:var(--accent);
+  animation:underline-slide 4.5s ease-out forwards;
+}
+
+@keyframes underline-slide {
+  0% {
+    transform:translateX(-120%);
+    opacity:0;
+  }
+  20% {
+    opacity:1;
+  }
+  70% {
+    transform:translateX(0);
+    opacity:1;
+  }
+  100% {
+    transform:translateX(120%);
+    opacity:0;
+  }
+}
+
+
   </style>
 </head>
 
 <body id="top">
-  <header>
-    <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <div class="brand-top">Modern English Australia</div>
-        <div class="brand-sub">Koala Spies Sydney</div>
-      </a>
 
-      <nav aria-label="Primary">
-        <a class="active" href="#top">Home</a>
-        <a href="#micro-lessons">Micro Lessons</a>
-        <a class="cta" href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <div class="brand-top">Modern English Au</div>
+      <span class="kss-font">Koala Spies Sydney</span>
+    </a>
+
+</header>
+
+<div class="wrap">
+  <h1>
+    <span class="animated-phrase">education revolution</span>
+  </h1>
+</div>
+
 
   <main>
     <section id="micro-lessons" class="section">
       <div class="wrap">
-        <p class="kicker">Micro lessons</p>
-        <h1>
+        
 <h1>
-  Micro Lessons for Classroom Teaching and Self‑Study
-  <span class="animated-phrase">education revolution</span>
+  Micro Lessons  & Mini-Tests for Classroom Teaching and Self‑Study
 </h1>
 
 
         <p>
-          These lessons are part of my ongoing work as a test designer, UX learning designer, and EdTech specialist.
-          They showcase the kind of interactive, research-based materials I create—fast, focused activities that build
-          real exam skills as well as everyday communication skills.
+       These microlessons and mini-tests were all devised while I was working in an ESL classroom and studying UX design and coding. Feel free to use them and send me feedback.
+        </p>
+
+        <p class=" muted">
+         I’m also happy to keep creating and posting microlesson- send me your requests!
         </p>
 
         <p>
-          Each lesson is fully responsive and can be used on a computer, phone, tablet, or projected onto a classroom
-          whiteboard. Teachers can use them as warm-ups, extension activities, or quick feedback tools. Learners can use
-          them independently at home to strengthen areas that textbooks and traditional curricula often miss.
-        </p>
-
-        <p class="muted">
-          The lessons target pronunciation, listening, micro-writing, grammar accuracy, and common learner errors across
-          IELTS, PTE, CAE, and general English. They are short, practical, and designed to fill the gaps that matter—
-          supporting both test preparation and clearer, more confident communication in an English-speaking environment.
+       I would be absolutely thrilled to create bespoke and branded lessons for your organisation. Go the contact page to request a quote.
         </p>
         <!-- Repeat Sentences & Dictation -->
 <div class="category">
@@ -293,9 +384,8 @@
 
     <section id="contact" class="section">
       <div class="wrap">
-        <p class="kicker">Contact</p>
-        <h2>Contact</h2>
-        <p class="muted">Add your email, social links, or a real form handler later.</p>
+        <p class="kicker">Contact & Feedback</p>
+        <p class="muted">koalaspies@duck.com</p>
       </div>
     </section>
   </main>
@@ -305,10 +395,11 @@
       <div>© Koala Spies Sydney · Modern English Australia · All Rights Reserved</div>
       <div class="footer-links">
         <a href="#top">KOALA SPIES SYDNEY</a>
-        <a href="#micro-lessons">Micro Lessons</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Modern English AU</a>
+       
       </div>
     </div>
   </footer>
 </body>
 </html>
+
